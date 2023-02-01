@@ -15,10 +15,23 @@ html {
  */
 
 body {
-  color: #545149;
   background-color: #f4f1ec;
+  color: #000000;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 24px;
 }
+
+.container {
+  padding: 2em;
+  background-color: #f4f1ec;
+  color: #000000;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+
+
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions

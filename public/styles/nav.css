@@ -1,0 +1,25 @@
+.navbar {
+  height: 120px; 
+  width: 100vw;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  padding: 1.5em;
+  position: fixed;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: 'Bungee', cursive;
+}
+
+.fa-angles-down {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: orangered;
+}
+
+
+

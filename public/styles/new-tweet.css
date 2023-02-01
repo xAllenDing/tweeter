@@ -1,0 +1,31 @@
+textarea {
+  background: transparent;
+  border: 0 none;
+  outline: none;
+  width: 100%;
+  border-bottom: 5px solid black;
+}
+
+div{
+   display:flex;
+   justify-content: space-between;
+}
+
+button {
+  font-family: 'Bungee', cursive;
+  background-color: #4056A1;
+  color: #fff;
+}
+
+.new-tweet{
+  width: 50vw;
+  height: 500px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.counter {
+  font-family: 'Bungee', cursive;
+}
