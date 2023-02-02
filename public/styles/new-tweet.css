@@ -6,9 +6,9 @@ textarea {
   border-bottom: 5px solid black;
 }
 
-div{
-   display:flex;
-   justify-content: space-between;
+div {
+  display: flex;
+  justify-content: space-between;
 }
 
 button {
@@ -17,7 +17,7 @@ button {
   color: #fff;
 }
 
-.new-tweet{
+.new-tweet {
   width: 50vw;
   height: 500px;
 
@@ -34,31 +34,36 @@ button {
 article {
   border-style: solid;
   padding: 1em;
+
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
 }
 
-.tweet-header{
+article:hover {
+  box-shadow: 5px 5px rgb(0, 162, 255);
+}
+
+.tweet-header {
   height: 100%;
   width: 100%;
   background: transparent;
   color: black;
- 
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
 }
 
-.name{
+.name {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-footer{
+footer {
   height: 50px;
   width: 100%;
   border-top: 2px solid black;
@@ -79,4 +84,16 @@ footer{
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+
+.fa-heart:hover {
+  color: rgb(0, 162, 255);
+}
+
+.fa-flag:hover {
+  color: rgb(0, 162, 255);
+}
+
+.fa-retweet:hover {
+  color: rgb(0, 162, 255);
 }
