@@ -63,6 +63,10 @@ article:hover {
   align-items: center;
 }
 
+.name h4 {
+  margin-left: 10px;
+}
+
 footer {
   height: 50px;
   width: 100%;
