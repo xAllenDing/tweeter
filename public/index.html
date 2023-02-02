@@ -27,10 +27,14 @@
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+    integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
 </head>
 
 <body>
@@ -48,15 +52,24 @@
     </div>
     <br>
     <div class="name">
-      <h2><b>Your</b> Name</h2>
+      <h2><b>Allen</b> Ding</h2>
     </div>
   </header>
 
   <!-- Page-specific (main) content here -->
   <main class="container">
+    <section class="error-msg">
+      <div class="error-long">
+        Your tweet is too long! Tweet exceeds 140 characters!
+      </div>
+      <div class="error-empty">
+        Empty tweet! Please enter in a tweet!
+      </div>
+    </section>
+
     <section class="new-tweet">
       <h2>Compose Tweet</h2>
-      <form method="POST" action="/tweets">
+      <form method="POST" action="/tweets/" class="new-tweet">
         <label for="tweet-text"><b>What are you humming about?</b></label>
         <textarea name="text" id="tweet-text"></textarea>
         <div>
@@ -68,7 +81,7 @@
 
     <section id="tweets-container">
 
-      <article>
+      <!-- <article>
         <header class="tweet-header">
           <div class="name">
             <i class="fa-solid fa-user"></i>
@@ -85,7 +98,7 @@
             <i class="fa-solid fa-retweet"></i>
           </div>
         </footer>
-      </article>
+      </article> -->
 
     </section>
 
