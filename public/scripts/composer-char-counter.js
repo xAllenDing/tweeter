@@ -7,7 +7,7 @@ $(document).ready(function () {
     let textLength = $(this).val().length;
     remainingChar -= textLength;
 
-    // updates the new value of remainingChar
+    // updates the output with new value of remainingChar
     let updatedChar = $('output').val(remainingChar);
 
     if (remainingChar < 0) {
@@ -16,6 +16,6 @@ $(document).ready(function () {
     } else {
       updatedChar.css('color', '#545149');
     }
-    
+
   });
 });
