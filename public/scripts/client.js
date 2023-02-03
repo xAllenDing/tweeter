@@ -6,6 +6,7 @@
 
 $(document).ready(function () {
   
+  // reads the data from the server and update tweets without page reload
   const loadTweets = () => {
     $.ajax({
       url: "/tweets/",
@@ -19,12 +20,15 @@ $(document).ready(function () {
     });
   };
   
+  // calls loadTweets function and loads the initial tweets in the history
   loadTweets();
 
+  // hides error messages until errors do occur
   $('.error-empty').hide();
   $('.error-long').hide();
 
-  // reference dont make variable
+  // posts tweets without having the page to refresh and displays error messages
+  // if the tweet is too long or is empty
   const $tweetPost = $('form.new-tweet');
   const $textarea = $('textarea');
   $tweetPost.on('submit', function (event) {
@@ -45,12 +49,16 @@ $(document).ready(function () {
     });
   });
 
+
+  // ensures that posts won't manipulate data and that it will be posted as a
+  // text
   const escape = function (str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
 
+  // gathers all the information for the new tweet
   const createTweetElement = function (tweet) {
     const $markup = `
     <article>
@@ -74,8 +82,9 @@ $(document).ready(function () {
     return $markup;
   }
 
+  // loops through an array of tweets and then gets passed into 
+  // createTweetElement and then it gets posted onto the webpage
   const renderTweets = function (tweets) {
-    $('#tweets-container').empty();
     for (let tweet of tweets) {
       let $tweet = createTweetElement(tweet);
       $('#tweets-container').prepend($tweet)

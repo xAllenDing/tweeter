@@ -69,15 +69,14 @@ footer {
   color: rgb(0, 162, 255);
 }
 
-@media only screen and (min-width: 1024px) {
+/* @media only screen and (min-width: 1024px) {
   .name {
     flex-basis: 50%;
   }
 
   .handle-name {
-    opacity: 0;
     display: flex;
     flex-basis: 50%;
     justify-content: flex-end;
   }
-}
+} */
