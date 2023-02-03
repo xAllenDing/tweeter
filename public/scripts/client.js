@@ -4,32 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd"
-    },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-];
-
 $(document).ready(function () {
   
   const loadTweets = () => {
@@ -46,16 +20,20 @@ $(document).ready(function () {
   };
   
   loadTweets();
-  
+
+  $('.error-empty').hide();
+  $('.error-long').hide();
+
+  // reference dont make variable
   const $tweetPost = $('form.new-tweet');
   const $textarea = $('textarea');
   $tweetPost.on('submit', function (event) {
     event.preventDefault();
     if ($textarea.val().length === 0) {
-      $('.error-empty').slideDoown(600).delay(1500).slideUp(600);
+      $('.error-empty').slideDown(600).delay(1500).slideUp(600);
       return;
     } else if ($textarea.val().length > 140) {
-      $('.error-long').slideDoown(600).delay(1500).slideUp(600);
+      $('.error-long').slideDown(600).delay(1500).slideUp(600);
       return;
     }
     const serializedTweet = $(this).serialize();
@@ -85,7 +63,7 @@ $(document).ready(function () {
     </header>
     <p>${escape(tweet.content["text"])}</p>
     <footer>
-      <p>${tweet.created_at}</p>
+      <p>${timeago.format(tweet.created_at)}</p>
       <div class="icon"> 
         <i class="fa-solid fa-heart"></i>
         <i class="fa-solid fa-flag"></i>
@@ -103,7 +81,6 @@ $(document).ready(function () {
       $('#tweets-container').prepend($tweet)
     }
   }
-  renderTweets(data);
 });
 
 
