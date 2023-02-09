@@ -85,6 +85,7 @@ $(document).ready(function () {
   // loops through an array of tweets and then gets passed into 
   // createTweetElement and then it gets posted onto the webpage
   const renderTweets = function (tweets) {
+    $('#tweets-container').empty();
     for (let tweet of tweets) {
       let $tweet = createTweetElement(tweet);
       $('#tweets-container').prepend($tweet)

@@ -19,7 +19,7 @@ button {
 
 .new-tweet {
   width: 50vw;
-  height: 500px;
+  height: 250px;
 
   display: flex;
   flex-direction: column;
