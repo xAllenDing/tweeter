@@ -4,6 +4,7 @@ textarea {
   outline: none;
   width: 100%;
   border-bottom: 5px solid black;
+  inline-size: min-content;
 }
 
 div {
